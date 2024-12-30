@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/*hiding an element*/
+p1 {
+display: none;
+}
+img{
+    display: block;
+    width: 500px;
+ 
+}
+
+p{
+    display: inline;
+    display: flex;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;/*distribute the space items*/
+    align-items: center;/*aligns vertically in the center*/
+    background-color: brown;
+    height: 300px;
+}
+ 
+.box{
+    flex: 1;/*makes all boxes to have the same space*/
+    margin: 0 10px;/*adds horizontal space btn boxes*/
+    padding: 20px;/*adds space inside each box*/
+    background-color: aqua;
+    text-align: center;
+    flex: 1 1 30%;
+    min-width: 200px;
+
+    margin: top right bottom left;
+    margin: vertical horizontal;
+    margin: 20px;
+
+    /*media query is a feature in css to define 
+    stling property/ css rule based on certain conditions
+
+    things to consider for responsisive web designs
+    1.fluid layouts(layers adjusts automatically ie sizes are not fixed
+    2. media queries to apply styling properties based on scren sizes
+    3. flexible images
+
+
+    firstly capture device width then perform responsiveness
+
+
+
+    flex :grow shrink basis
+    grow-rate if growth of the flex items
+    shrink rate of decrease of the flex items
+    basis- initial size of the flec items
+    */
+}
+
+
+/*media query for responsiveness*/
+/* larger screens */
+@media (min-width: 768px){
+    .box{
+        flex: 1 1 30%;
+    }
+}
+
+
+
+/* smaller screens */
+@media (max-width: 768px){
+    .box{
+        flex: 1 1 45%;
+    }
+}
+
+
+/* smaller screens than 480px */
+@media (max-width: 800px){
+    .box{
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/*for images, set max width to 100% and height to auto*/
+
+
